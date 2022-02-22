@@ -6,21 +6,23 @@ using System.Threading.Tasks;
 
 namespace Generic
 {
-    public class TestMaximum
+
+    public class TestMaximum<T> where T : IComparable
     {
-        public static string Maximumstring(string firststring, string secondstring, string thirdstring)
+        public T MaximumNumber(T firstnumber, T secondnumber, T thirdnumber)
         {
-            if (firststring.CompareTo(secondstring) > 0 && firststring.CompareTo(thirdstring) > 0)
+
+            if (firstnumber.CompareTo(secondnumber) > 0 && firstnumber.CompareTo(thirdnumber) > 0)
             {
-                return firststring;
+                return firstnumber;
             }
-            if (secondstring.CompareTo(firststring) > 0 && secondstring.CompareTo(thirdstring) > 0) 
-            { 
-                return secondstring;
+            if (secondnumber.CompareTo(firstnumber) > 0 && secondnumber.CompareTo(thirdnumber) > 0)
+            {
+                return secondnumber;
             }
             else
-                return thirdstring;
-
+                return thirdnumber;
         }
+
     }
 }
