@@ -8,18 +8,18 @@ namespace Generic
 {
     public class TestMaximum
     {
-        public static double MaximumNumber(double firstnumber, double secondnumber, double thirdnumber)
+        public static string Maximumstring(string firststring, string secondstring, string thirdstring)
         {
-            if (firstnumber.CompareTo(secondnumber) > 0 && firstnumber.CompareTo(thirdnumber) > 0)
+            if (firststring.CompareTo(secondstring) > 0 && firststring.CompareTo(thirdstring) > 0)
             {
-                return firstnumber;
+                return firststring;
             }
-            if (secondnumber.CompareTo(firstnumber) > 0 && secondnumber.CompareTo(thirdnumber) > 0) 
+            if (secondstring.CompareTo(firststring) > 0 && secondstring.CompareTo(thirdstring) > 0) 
             { 
-                return secondnumber;
+                return secondstring;
             }
             else
-                return thirdnumber;
+                return thirdstring;
 
         }
     }
