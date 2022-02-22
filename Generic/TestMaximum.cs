@@ -8,14 +8,14 @@ namespace Generic
 {
     public class TestMaximum
     {
-        public int MaximumNumber(int firstnumber, int secondnumber, int thirdnumber)
+        public static double MaximumNumber(double firstnumber, double secondnumber, double thirdnumber)
         {
             if (firstnumber.CompareTo(secondnumber) > 0 && firstnumber.CompareTo(thirdnumber) > 0)
             {
                 return firstnumber;
             }
-            if (secondnumber.CompareTo(firstnumber) > 0 && secondnumber.CompareTo(thirdnumber) > 0)
-            {
+            if (secondnumber.CompareTo(firstnumber) > 0 && secondnumber.CompareTo(thirdnumber) > 0) 
+            { 
                 return secondnumber;
             }
             else

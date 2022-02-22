@@ -10,6 +10,9 @@ namespace Generic
     {
         static void Main(string[] args)
         {
+            double doubleoutput = TestMaximum.MaximumNumber(121.2, 11.5, 89.5);
+            Console.WriteLine(doubleoutput);
+            Console.ReadLine();
         }
     }
 }
