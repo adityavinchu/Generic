@@ -7,26 +7,40 @@ using System.Threading.Tasks;
 
 namespace Generic
 {
-
     public class TestMaximum<T> where T : IComparable
     {
-        public T MaximumNumber(T firstnumber, T secondnumber, T thirdnumber, [Optional] T fourthNUmber)
+        public T firstnumber, secondnumber, thirdnumber, fourthnumber;
+
+        public TestMaximum(T firstnumber, T secondnumber, T thirdnumber, [Optional] T fourthNumber)
+        {
+            this.firstnumber = firstnumber;
+            this.secondnumber = secondnumber;
+            this.thirdnumber = thirdnumber;
+            this.fourthnumber = fourthNumber;
+        }
+
+        public T MaximumNumber()
         {
 
-            if (firstnumber.CompareTo(secondnumber) > 0 && firstnumber.CompareTo(thirdnumber) > 0 && firstnumber.CompareTo(fourthNUmber) > 0)
+
+            if (this.firstnumber.CompareTo(secondnumber) > 0 && this.firstnumber.CompareTo(thirdnumber) > 0 && this.firstnumber.CompareTo(this.fourthnumber) > 0)
             {
-                return firstnumber;
+                return this.firstnumber;
             }
-            if (secondnumber.CompareTo(firstnumber) > 0 && secondnumber.CompareTo(thirdnumber) > 0 && secondnumber.CompareTo(fourthNUmber) > 0)
+            if (this.secondnumber.CompareTo(firstnumber) > 0 && this.secondnumber.CompareTo(thirdnumber) > 0 && this.secondnumber.CompareTo(this.fourthnumber) > 0)
             {
-                return secondnumber;
+                return this.secondnumber;
             }
-            if (thirdnumber.CompareTo(firstnumber) > 0 && thirdnumber.CompareTo(secondnumber) > 0 && thirdnumber.CompareTo(fourthNUmber) > 0)
+            if (this.thirdnumber.CompareTo(firstnumber) > 0 && this.thirdnumber.CompareTo(secondnumber) > 0 && this.thirdnumber.CompareTo(this.fourthnumber) > 0)
             {
-                return thirdnumber;
+                return this.thirdnumber;
             }
             else
-                return fourthNUmber;
+                return this.fourthnumber;
+        }
+        public void Print(T dynamic)
+        {
+            Console.WriteLine("max:"+dynamic);
         }
 
     }
